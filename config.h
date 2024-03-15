@@ -37,7 +37,7 @@ static const char col_borderbar[] = "#1E1D2D"; // inner border
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel] = { col_sapphire, col_black, col_teal },
+	[SchemeSel] = { col_teal, col_black, col_teal },
 };
 
 /* tagging */
