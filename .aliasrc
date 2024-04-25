@@ -1,0 +1,77 @@
+#############
+# VOID Linux
+#############
+alias i="doas xbps-install -S"
+alias u="i; doas xbps-install -u xbps; doas xbps-install -u"
+alias q="xbps-query -Rs"
+alias r="doas xbps-remove -R"
+#############
+# shortcuts
+#############
+alias code="/usr/share/code/bin/code"
+alias vim="nvim"
+alias cl="clear"
+alias t="tmux"
+alias calc="node"
+alias ls='lsd'
+alias lsa='lsd -la'
+alias ks='lsd'
+alias cat='bat --theme="Catppuccin-mocha"'
+alias lg='lazygit'
+#############
+# quick change
+#############
+alias sxkb='cd ~/.config/sxhkd/; nvim .;'
+alias vimrc="cd ~/.config/nvim; nvim ."
+alias zshrc='vim ~/.zshrc'
+#############
+#### exit
+#############
+alias :q="exit"
+alias :Q="exit"
+#############
+# git
+#############
+alias gs="gss"
+alias gdf="git diff | delta"
+alias co='git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always" --pointer="" | xargs git checkout'
+# alias cb='git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always" --pointer="" | xsel -i -b'
+alias cb='git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always" --pointer="" | xargs | sed 's/^\* //' | xsel -i -b'
+
+
+
+# Kubernetes
+alias k="kubectl"
+alias ka="kubectl apply -f"
+alias kg="kubectl get"
+alias kd="kubectl describe"
+alias kdel="kubectl delete"
+alias kl="kubectl logs"
+alias kgpo="kubectl get pod"
+alias kgd="kubectl get deployments"
+alias kc="kubectx"
+alias kns="kubens"
+alias kl="kubectl logs -f"
+alias ke="kubectl exec -it"
+alias kcns='kubectl config set-context --current --namespace'
+alias podname=''
+
+# Docker
+alias dco="docker compose"
+alias dps="docker ps"
+alias dpa="docker ps -a"
+alias dl="docker ps -l -q"
+alias dx="docker exec -it"
+
+alias la=tree
+alias rr='ranger'
+
+# Dirs
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+
+
+alias reboot="doas reboot"
