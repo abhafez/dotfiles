@@ -5,11 +5,10 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font =
-    "JetBrainsMono NFP Medium:pixelsize=22:antialias=true:autohint=true";
+static char *font = "Maple Mono:pixelsize=18:antialias=true:autohint=true";
 static char *font2[] = {
-    "NotoColorEmoji:pixelsize=16:antialias=true:autohint=true"};
-static int borderpx = 10;
+    "NotoColorEmoji:pixelsize=18:antialias=true:autohint=true"};
+static int borderpx = 12;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -114,20 +113,21 @@ float alphaOffset = 0.0;
 float alphaUnfocus;
 
 /* Terminal colors (16 first used in escape sequence) */
+// OLD COLOR WAS #1E1E2E
 static const char *colorname[] = {
     /* 8 normal colors */
     "#45475A", "#F38BA8", "#94E2D5", "#F9E2AF", "#89B4FA", "#F38BA8", "#BAC2DE",
-    "#1E1E2E",
+    "#11111B",
     /* 8 bright colors */
     "#585B70", "#F38BA8", "#94E2D5", "#F9E2AF", "#89B4FA", "#F38BA8", "#BAC2DE",
-    "#1E1E2E",
+    "#11111B",
 
     [256] = "#CDD6F4", /* default foreground colour */
-    [257] = "#1E1E2E", /* default background colour */
-    [258] = "#1E1E2E", /*575268*/
+    [257] = "#11111B", /* default background colour */
+    [258] = "#11111B", /*575268*/
     "#add8e6",         /* 256 -> cursor */
     "#555555",         /* 257 -> rev cursor*/
-    "#1E1E2E",         /* 258 -> bg */
+    "#11111B",         /* 258 -> bg */
     "#F5C2E7",         /* 259 -> fg */
 
 };
