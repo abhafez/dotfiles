@@ -1,0 +1,71 @@
+#############
+# Kali Linux
+#############
+alias i="doas apt install -y"
+alias u="doas apt update -y"
+alias q="apt-cache search"
+alias r="doas apt remove"
+#############
+# shortcuts
+#############
+# beacuse I use different setup for vscode
+alias code="/usr/bin/windsurf"
+alias vim="nvim"
+alias t="tmux"
+alias calc="node"
+alias ls='lsd'
+alias lsa='lsd -la'
+alias ks='lsd'
+alias cat='batcat --theme="Catppuccin Mocha"'
+alias bat='batcat --theme="Catppuccin Mocha"'
+alias batcat='batcat --theme="Catppuccin Mocha"'
+alias catbat='batcat --theme="Catppuccin Mocha"'
+alias lg='lazygit'
+alias ld='lazydocker'
+#############
+# quick change
+#############
+alias sxkbrc='cd ~/.config/sxhkd/; windsurf .;'
+alias vimrc="cd ~/.config/nvim; windsurf ."
+alias zshrc='windsurf ~/.zshrc'
+alias bashrc='windsurf ~/.bashrc'
+alias aliasrc="windsurf ~/.aliasrc"
+alias so="source ~/.aliasrc"
+#############
+#### exit
+#############
+alias :q="exit"
+alias qq="exit"
+alias :Q="exit"
+#############
+# git
+#############
+alias gdf="git diff | delta"
+alias co='git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always" --pointer="" | xargs git checkout'
+alias cb='git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always" --pointer="" | tr -d "\n" | xsel -i -b'
+##############
+# Docker
+##############
+alias dco="docker compose"
+alias dps="docker ps"
+alias dpa="docker ps -a"
+alias dl="docker ps -l -q"
+alias dx="docker exec -it"
+# Exit docker
+alias dexit="docker stop \$(docker ps -q)"
+# Ranger
+alias rr='ranger'
+# Dirs
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+
+alias reboot="doas reboot"
+# cerca means search in Italian
+alias cerca="history | grep"
+# fzf
+alias vf='nvim $(fzf -m --preview="batcat --color=always {}")'
+# Miscallaneous
+alias cf='xclip -selection clipboard -t image/png -i'
