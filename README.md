@@ -5,6 +5,7 @@ This repository contains my personal dotfiles and configurations, including a pa
 ## Notes
 
 - `doas` is just my way to `sudo` use `sudo` if you don't have `doas` installed
+- `.gitconfig` includes my name and personal email you need to change them. 
 
 ## Prerequisites
 

@@ -2,6 +2,7 @@
 
 # Create necessary directories
 mkdir -p ~/.config/{bat/themes,dunst,fontconfig,rofi,sxhkd/scripts,tmux}
+# I just place my scripts in home
 mkdir -p ~/scripts
 
 # Copy dotfiles
