@@ -2,6 +2,14 @@
 
 This repository contains my personal dotfiles and configurations, including a patched version of the Dynamic Window Manager (DWM) 6.5.
 
+## Notes
+
+- `doas` is just my way to `sudo` use `sudo` if you don't have `doas` installed
+
+## Prerequisites
+
+- `git` (for cloning the repository)
+
 ## Contents
 
 - [DWM 6.5 (Patched)](#dwm-65-patched)
@@ -38,13 +46,13 @@ The following patches have been applied to the DWM 6.5 installation:
 
 2. Install DWM dependencies (Debian/Ubuntu):
    ```bash
-   sudo apt install make gcc libx11-dev libxft-dev libxinerama-dev libfribidi-dev
+   doas apt install make gcc libx11-dev libxft-dev libxinerama-dev libfribidi-dev
    ```
 
 3. Build and install DWM:
    ```bash
    cd dwm-6.5
-   sudo make clean install
+   doas make clean install
    ```
 
 ### Configuration
@@ -57,7 +65,7 @@ To modify the configuration:
 2. Recompile and install DWM:
    ```bash
    cd dwm-6.5
-   sudo make clean install
+   doas make clean install
    ```
 
 ### Usage
@@ -79,20 +87,25 @@ done &
 
 #### Default Keybindings
 
-- **Alt+p**: Open dmenu (program launcher)
-- **Alt+Shift+Enter**: Open terminal
-- **Alt+j/k**: Navigate through windows
-- **Alt+Shift+c**: Close focused window
-- **Alt+[1-9]**: Switch to tag [1-9]
-- **Alt+Shift+[1-9]**: Move focused window to tag [1-9]
-- **Alt+t**: Set tiled layout
-- **Alt+f**: Set floating layout
-- **Alt+m**: Set monocle layout
-- **Alt+Space**: Toggle between current and previous layout
+- **Win+d**: Open dmenu (program launcher)
+- **Win+Enter**: Open terminal (ST by default)
+- **Win+j/k**: Navigate through windows
+- **Win+Shift+q**: Close focused window
+- **Win+Shift+c**: Quit DWM (Logout)
+- **Win+[1-9]**: Switch to tag [1-9]
+- **Win+Shift+[1-9]**: Move focused window to tag [1-9]
 
-## Other Configurations
+#### Config Files
+Installation Script
+To automate the installation, here's a simple script you can use:
 
-(This section will be expanded as more configurations are added to the repository)
+```bash
+bash install.sh
+doas cp config/fontconfig/fonts.conf /etc/fonts/local.conf # make sure you set valid fonts of your system in this file
+doas fc-cache -f -v
+```
+
+
 
 ## License
 
