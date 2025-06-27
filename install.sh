@@ -23,6 +23,7 @@ cp $DOT_FILES/config/rofi/* ~/.config/rofi/
 cp $DOT_FILES/config/sxhkd/sxhkdrc ~/.config/sxhkd/
 cp $DOT_FILES/config/sxhkd/scripts/* ~/.config/sxhkd/scripts/
 cp $DOT_FILES/config/tmux/* ~/.config/tmux/
+cp $DOT_FILES/cursor/* ~/.icons/
 
 # Copy scripts
 cp $DOT_FILES/scripts/* ~/scripts/
