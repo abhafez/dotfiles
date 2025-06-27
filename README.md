@@ -2,6 +2,8 @@
 
 This repository contains my personal dotfiles and configurations, including a patched version of the Dynamic Window Manager (DWM) 6.5.
 
+![DWM Desktop Preview](preview/preview.png)
+
 ## Notes
 
 - `doas` is just my way to `sudo` use `sudo` if you don't have `doas` installed
