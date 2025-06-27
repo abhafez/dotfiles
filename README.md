@@ -10,14 +10,40 @@ This repository contains my personal dotfiles and configurations, including a pa
 ## Prerequisites
 
 - `git` (for cloning the repository)
+- install dmenu and st from suckless repository (or use my versions)
 
 ## Contents
 
+- [Dotfiles Overview](#dotfiles-overview)
+- [Configuration Files](#configuration-files)
+- [Scripts](#scripts)
 - [DWM 6.5 (Patched)](#dwm-65-patched)
   - [Applied Patches](#applied-patches)
   - [Installation](#installation)
   - [Configuration](#configuration)
   - [Usage](#usage)
+
+## Dotfiles Overview
+
+This repository includes the following dotfiles:
+
+- `.aliasrc`: Contains shell aliases for common commands
+- `.bg.png`: Background image for desktop environment
+- `.tmux.conf`: Configuration for tmux terminal multiplexer
+- `.zshrc`: Configuration for Zsh shell
+- `.gitconfig`: Git configuration (remember to update with your personal info)
+
+## Configuration Files
+
+The repository contains configuration files for various tools organized in directories:
+
+- **bat/themes**: Custom themes for the `bat` command (an enhanced `cat` replacement)
+- **dunst**: Configuration for the Dunst notification daemon
+- **fontconfig**: Font configuration files
+- **rofi**: Configuration for Rofi application launcher
+- **sxhkd**: Simple X hotkey daemon configuration
+  - **scripts**: Helper scripts for sxhkd keybindings
+- **tmux**: Additional tmux configuration files
 
 ## DWM 6.5 (Patched)
 
@@ -97,8 +123,13 @@ done &
 - **Win+Shift+[1-9]**: Move focused window to tag [1-9]
 
 #### Config Files
-Installation Script
-To automate the installation, here's a simple script you can use:
+
+## Scripts
+
+The repository includes various utility scripts located in the `scripts/` directory. These scripts are automatically installed to `~/scripts/` and made executable.
+
+## Installation Script
+To automate the installation of all dotfiles, configurations, and scripts, use the provided installation script:
 
 ```bash
 bash install.sh
@@ -106,8 +137,15 @@ doas cp config/fontconfig/fonts.conf /etc/fonts/local.conf # make sure you set v
 doas fc-cache -f -v
 ```
 
+The install script:
+1. Creates necessary directories in your home folder
+2. Copies all dotfiles to your home directory
+3. Copies configuration files to their respective locations
+4. Copies and makes scripts executable
+5. Optionally installs DWM (commented out by default)
+
 
 
 ## License
 
-The configurations in this repository are released under the MIT License. The DWM source code is licensed under the MIT/X Consortium License as specified in the DWM directory.
+The DWM and all suckless tools source code are licensed under the MIT/X Consortium License.
