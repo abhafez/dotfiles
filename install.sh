@@ -11,6 +11,7 @@ cp $DOT_FILES/.aliasrc ~/.aliasrc
 cp $DOT_FILES/.bg.png ~/.bg.png
 cp $DOT_FILES/.tmux.conf ~/.tmux.conf
 cp $DOT_FILES/.zshrc ~/.zshrc
+cp $DOT_FILES/.compton.conf ~/.compton.conf
 
 # You may want to customize .gitconfig before copying
 cp $DOT_FILES/.gitconfig ~/.gitconfig

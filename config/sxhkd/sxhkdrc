@@ -25,7 +25,7 @@ super + shift + w
   windsurf
 
 super + shift + o
-  obsidian
+  obsidian; xdotool key super+5
 
 super + shift + m
   morgen; xdotool key super+4
@@ -34,7 +34,7 @@ super + shift+ p
   pavucontrol
 
 super + shift + f
-  firefox; xdotool key super+1
+  firefox; xdotool key super+2
 
 super + shift + s
   slack; xdotool key super+9
