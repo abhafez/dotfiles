@@ -40,16 +40,16 @@ static char *get_layout(char *syms, int grp_num) {
   }
 
   if (strcmp(layout, "gb") == 0) {
-    return "🌏";
+    return "ENG";
   }
 
   if (strcmp(layout, "ara") == 0) {
-    return "🏇";
+    return "AR";
     ;
   }
 
   if (strcmp(layout, "us") == 0) {
-    return "🌭";
+    return "EN";
   }
 
   return layout;
