@@ -1,0 +1,24 @@
+# Kill the processes
+echo "Found process(es) using port $PORT. Killing..."
+for PID in $PIDS; do
+  echo "Killing process with PID: $PID"
+  kill -9 $PID 2>/dev/null
+  if [ $? -eq 0 ]; then
+    echo "✓ Successfully killed process $PID"
+  else
+    echo "✗ Failed to kill process $PID. You may need to run with sudo."
+  fi
+done
+
+# Verify if processes were killed
+SLEEP_TIME=1
+echo "Verifying port status after $SLEEP_TIME second..."
+sleep $SLEEP_TIME
+REMAINING=$(lsof -t -i:$PORT 2>/dev/null)
+
+if [ -z "$REMAINING" ]; then
+  echo "✓ All processes on port $PORT have been successfully terminated."
+else
+  echo "✗ Some processes are still running on port $PORT. You may need to run with sudo."
+  echo "Remaining PIDs: $REMAINING"
+fi
