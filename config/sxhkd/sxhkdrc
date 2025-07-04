@@ -9,7 +9,7 @@ super + alt + r
   rofi -modi emoji -show emoji -emoji-format
 
 super + r
-  rofi -show drun
+  bash ~/.config/rofi/scripts/launcher_t6
 
 ##################################################################
 #             __ _
@@ -24,17 +24,23 @@ super + shift + a
 super + shift + w
   windsurf
 
+super + shift + r
+  rubymine; xdotool key super+3
+
 super + shift + o
   obsidian; xdotool key super+5
 
 super + shift + m
-  morgen; xdotool key super+4
+  morgen; xdotool key super+6
 
 super + shift+ p
   pavucontrol
 
 super + shift + f
   firefox; xdotool key super+2
+
+super + shift + t
+  telegram; xdotool key super+8
 
 super + shift + s
   slack; xdotool key super+9
@@ -95,7 +101,10 @@ super + shift + n
 super + shift + l
   slock
 
-super + shift + BackSpace
+super + shift + alt + r
+  doas reboot
+
+super + shift + alt + s
   doas shutdown -h now
 
 supper + esc
