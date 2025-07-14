@@ -862,7 +862,7 @@ xloadcols(void)
 		}
 
 	if (dc.collen) // cannot die, as the color is already loaded.
-		xloadcolor(background, NULL, &dc.col[defaultbg]);
+		xloadcolor(defaultbg, NULL, &dc.col[defaultbg]);
 
 	xloadalpha();
 	loaded = 1;
