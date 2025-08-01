@@ -44,12 +44,12 @@ static char *get_layout(char *syms, int grp_num) {
   }
 
   if (strcmp(layout, "ara") == 0) {
-    return "AR";
+    return "󱌨";
     ;
   }
 
   if (strcmp(layout, "us") == 0) {
-    return "EN";
+    return "󰾸";
   }
 
   return layout;

@@ -6,16 +6,16 @@ static const int showsystray        = 1;        /* 0 means no systray */
 static const int systraypinning    = 0;        /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int systrayonleft     = 0;        /* 0: systray in the right corner, >0: systray on left of status text */
-static const int systrayspacing    = 2;        /* systray spacing */
+static const int systrayspacing    = 4;        /* systray spacing */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Agave Nerd Font Propo:size=20:antialias=true:autohint=true", "Noto Sans Arabic:size=20:antialias=true:autohint=true", "Noto Color Emoji:size=20:antialias=true:autohint=true" };
-static const char dmenufont[]       = "Agave Nerd Font Propo:size=20:antialias=true:autohint=true";
+static const char *fonts[]          = { "Blogger Sans Medium:size=18:antialias=true:autohint=true","Agave Nerd Font Propo:size=20:antialias=true:autohint=true", "Noto Sans Arabic:size=18:antialias=true:autohint=true", "Noto Color Emoji:size=18:antialias=true:autohint=true" };
+static const char dmenufont[]       = "Blogger Sans Medium:size=18:antialias=true:autohint=true";
 static const char col_gray1[]       = "#1e1e2e";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -27,7 +27,7 @@ static const char col_cyan[]        = "#005577";
 static const char *colors[][3]      = {
     /*                     fg       bg      border */
     [SchemeNorm]       = { gray3,   black,  gray2 },
-    [SchemeSel]        = { gray4,   blue,   blue  },
+    [SchemeSel]        = { gray4,   purple,   purple  },
     // [SchemeTitle]      = { white,   black,  black }, // active window title
     // [TabSel]           = { blue,    gray2,  black },
     // [TabNorm]          = { gray3,   black,  black },
@@ -44,21 +44,16 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "󰅪", "", "", "󱨴", "", "󰧮", "󱘶", "" };
+static const char *tags[] = { "", "󰅪", "", "", "󰧮",  "󱘶", "󱨴", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
+	/*		class				   instance		    title       tags mask     isfloating   monitor */
 	{ "copyq",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",   NULL,       NULL,       1 << 2,       0,           -1 },
-	{ "PyCharm",   NULL,       NULL,       1 << 1,       0,           -1 },
-	{ "rubymine",  NULL,       NULL,       1 << 4,       0,           -1 },
-	{ "Telegram",  NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "slack",     NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "st",        NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "peek",	   NULL,       NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
@@ -71,15 +66,16 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "󰝘",      	 tile },    /* first entry is default */
-	{ "",      	NULL },    /* no layout function means floating behavior */
-	{ "[M]",      	 monocle },
-	{ "",        	spiral },
+	{ "󰝘",      		tile },    /* first entry is default */
+	{ "",      		NULL },    /* no layout function means floating behavior */
+	{ "[M]",      		monocle },
+	{ "",        		spiral },
 	{ "[\\]",      	dwindle },
 };
 
 /* key definitions */
 #define MODKEY Mod4Mask
+#define ALTKEY Mod1Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -107,17 +103,15 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
-	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_i,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
-	{ MODKEY,                       XK_Tab,    view,           {0} },
+	{ ALTKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY|ShiftMask,             XK_m,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY|ShiftMask,             XK_f,      setlayout,      {.v = &layouts[1]} },
-	{ MODKEY|ShiftMask,             XK_r,      setlayout,      {.v = &layouts[3]} },
-	{ MODKEY|ShiftMask|ControlMask, XK_r,      setlayout,      {.v = &layouts[4]} },
+	{ MODKEY|ShiftMask|ControlMask, XK_m,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY|ShiftMask|ControlMask, XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_f,      fullscreen,     {0} },
 	{ MODKEY|ShiftMask,             XK_j,      movestack,      {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,      movestack,      {.i = -1 } },
@@ -131,6 +125,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	{ MODKEY,                       XK_Tab,	  viewnext,       {0} },
 	{ MODKEY,                       XK_Right,  viewnext,       {0} },
 	{ MODKEY,                       XK_Left,   viewprev,       {0} },
 	{ MODKEY|ShiftMask,             XK_Right,  tagtonext,      {0} },
@@ -138,15 +133,15 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
-	TAGKEYS(                        XK_1,                      0)
-	TAGKEYS(                        XK_2,                      1)
-	TAGKEYS(                        XK_3,                      2)
-	TAGKEYS(                        XK_4,                      3)
-	TAGKEYS(                        XK_5,                      4)
-	TAGKEYS(                        XK_6,                      5)
-	TAGKEYS(                        XK_7,                      6)
-	TAGKEYS(                        XK_8,                      7)
-	TAGKEYS(                        XK_9,                      8)
+	TAGKEYS(								XK_1,                      0)
+	TAGKEYS(								XK_2,                      1)
+	TAGKEYS(								XK_3,                      2)
+	TAGKEYS(								XK_4,                      3)
+	TAGKEYS(								XK_5,                      4)
+	TAGKEYS(								XK_6,                      5)
+	TAGKEYS(								XK_7,                      6)
+	TAGKEYS(								XK_8,                      7)
+	TAGKEYS(								XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_c,      quit,           {0} },
 };
 

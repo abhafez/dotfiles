@@ -5,43 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d440d88-4e15-4a17-ad38-74da21b952e3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/dmenu/dmenu" beforeDir="false" afterPath="$PROJECT_DIR$/dmenu/dmenu" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dmenu/dmenu.o" beforeDir="false" afterPath="$PROJECT_DIR$/dmenu/dmenu.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dmenu/drw.o" beforeDir="false" afterPath="$PROJECT_DIR$/dmenu/drw.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dmenu/stest" beforeDir="false" afterPath="$PROJECT_DIR$/dmenu/stest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dmenu/stest.o" beforeDir="false" afterPath="$PROJECT_DIR$/dmenu/stest.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dmenu/util.o" beforeDir="false" afterPath="$PROJECT_DIR$/dmenu/util.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dwm-6.5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dwm/config.h" beforeDir="false" afterPath="$PROJECT_DIR$/dwm/config.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dwm/dwm" beforeDir="false" afterPath="$PROJECT_DIR$/dwm/dwm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dwm/dwm.o" beforeDir="false" afterPath="$PROJECT_DIR$/dwm/dwm.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slstatus/components/battery.o" beforeDir="false" afterPath="$PROJECT_DIR$/slstatus/components/battery.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slstatus/components/cpu.o" beforeDir="false" afterPath="$PROJECT_DIR$/slstatus/components/cpu.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slstatus/components/datetime.o" beforeDir="false" afterPath="$PROJECT_DIR$/slstatus/components/datetime.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slstatus/components/disk.o" beforeDir="false" afterPath="$PROJECT_DIR$/slstatus/components/disk.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slstatus/components/entropy.o" beforeDir="false" afterPath="$PROJECT_DIR$/slstatus/components/entropy.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slstatus/components/hostname.o" beforeDir="false" afterPath="$PROJECT_DIR$/slstatus/components/hostname.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slstatus/components/ip.o" beforeDir="false" afterPath="$PROJECT_DIR$/slstatus/components/ip.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slstatus/components/kernel_release.o" beforeDir="false" afterPath="$PROJECT_DIR$/slstatus/components/kernel_release.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slstatus/components/keyboard_indicators.o" beforeDir="false" afterPath="$PROJECT_DIR$/slstatus/components/keyboard_indicators.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/slstatus/components/keymap.c" beforeDir="false" afterPath="$PROJECT_DIR$/slstatus/components/keymap.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/slstatus/components/keymap.o" beforeDir="false" afterPath="$PROJECT_DIR$/slstatus/components/keymap.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slstatus/components/load_avg.o" beforeDir="false" afterPath="$PROJECT_DIR$/slstatus/components/load_avg.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slstatus/components/netspeeds.o" beforeDir="false" afterPath="$PROJECT_DIR$/slstatus/components/netspeeds.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slstatus/components/num_files.o" beforeDir="false" afterPath="$PROJECT_DIR$/slstatus/components/num_files.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slstatus/components/ram.o" beforeDir="false" afterPath="$PROJECT_DIR$/slstatus/components/ram.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slstatus/components/run_command.o" beforeDir="false" afterPath="$PROJECT_DIR$/slstatus/components/run_command.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slstatus/components/swap.o" beforeDir="false" afterPath="$PROJECT_DIR$/slstatus/components/swap.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slstatus/components/temperature.o" beforeDir="false" afterPath="$PROJECT_DIR$/slstatus/components/temperature.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slstatus/components/uptime.o" beforeDir="false" afterPath="$PROJECT_DIR$/slstatus/components/uptime.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slstatus/components/user.o" beforeDir="false" afterPath="$PROJECT_DIR$/slstatus/components/user.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slstatus/components/volume.o" beforeDir="false" afterPath="$PROJECT_DIR$/slstatus/components/volume.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slstatus/components/wifi.o" beforeDir="false" afterPath="$PROJECT_DIR$/slstatus/components/wifi.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/slstatus/slstatus" beforeDir="false" afterPath="$PROJECT_DIR$/slstatus/slstatus" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slstatus/slstatus.o" beforeDir="false" afterPath="$PROJECT_DIR$/slstatus/slstatus.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slstatus/util.o" beforeDir="false" afterPath="$PROJECT_DIR$/slstatus/util.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/st/config.h" beforeDir="false" afterPath="$PROJECT_DIR$/st/config.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/st/st.o" beforeDir="false" afterPath="$PROJECT_DIR$/st/st.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/st/x.c" beforeDir="false" afterPath="$PROJECT_DIR$/st/x.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,15 +32,17 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "com.intellij.lang.ruby.rbs.tools.collection.workspace.sync.RbsCollectionUpdateProjectActivity#LAST_UPDATE_TIMESTAMP": "1752489277092",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.lang.ruby.rbs.tools.collection.workspace.sync.RbsCollectionUpdateProjectActivity#LAST_UPDATE_TIMESTAMP": "1752603804064",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/hafez/dotfiles",
+    "last_opened_file_path": "/home/hafez/aanaab/fe/nextjs-aanaab-upgrade",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "/home/hafez/.asdf/installs/nodejs/24.4.0/bin/node",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.sync",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -263,6 +232,7 @@
       <workItem from="1751693865709" duration="148000" />
       <workItem from="1751703849155" duration="13000" />
       <workItem from="1752489218106" duration="126000" />
+      <workItem from="1752603745130" duration="90000" />
     </task>
     <servers />
   </component>
